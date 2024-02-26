@@ -1,0 +1,12 @@
+dev-deployment:
+ variables:
+   GIT_STRATEGY: fetch
+ script:
+   - bash ~/gitlab/devopswordpress.sh
+ environment:
+     name: Development
+     url : https://dev.wordpress-developer.us/procell-ui
+ tags:
+   - wts-wordpress
+ only:
+   - dev
